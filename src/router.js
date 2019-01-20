@@ -19,5 +19,11 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "wallpapers" */ './views/Wallpapers.vue'),
     },
+    {
+      path: '/wallpapers/:id',
+      name: 'wallpaper',
+      component: () =>
+        import(/* webpackChunkName: "wallpapers" */ './views/Wallpaper.vue'),
+    },
   ],
 });

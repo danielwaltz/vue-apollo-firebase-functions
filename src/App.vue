@@ -1,6 +1,5 @@
 <template>
   <div class="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
     <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/wallpapers">Wallpapers</router-link>
@@ -34,6 +33,15 @@ img {
   height: auto;
 }
 
+a {
+  font-weight: bold;
+  color: #42b983;
+}
+
+a.router-link-exact-active {
+  color: #2c3e50;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -42,11 +50,5 @@ nav {
 
 nav a {
   padding: 10px;
-  font-weight: bold;
-  color: #42b983;
-}
-
-nav a.router-link-exact-active {
-  color: #2c3e50;
 }
 </style>

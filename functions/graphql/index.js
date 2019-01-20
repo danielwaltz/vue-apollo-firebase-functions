@@ -5,7 +5,7 @@ const { wallpapers } = require('./data.js');
 const setupServer = () => {
   const typeDefs = gql`
     type Wallpaper {
-      id: ID!
+      id: ID
       name: String
       url: String
     }

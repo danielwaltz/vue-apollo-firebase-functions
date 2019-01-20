@@ -2,13 +2,14 @@
   <div class="wallpapers">
     <h1>Wallpapers</h1>
     <div class="grid">
-      <div
+      <router-link
         v-for="wallpaper in wallpapers"
         :key="wallpaper.id"
+        :to="{ name: 'wallpaper', params: { id: wallpaper.id } }"
         class="wallpaper"
       >
         <img :src="wallpaper.url" :alt="wallpaper.name" />
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -24,7 +25,9 @@ export default {
     };
   },
   apollo: {
-    wallpapers: WALLPAPERS,
+    wallpapers: {
+      query: WALLPAPERS,
+    },
   },
 };
 </script>
