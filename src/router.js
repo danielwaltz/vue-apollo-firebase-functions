@@ -14,10 +14,10 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/wallpapers',
+      name: 'wallpapers',
       component: () =>
-        import(/* webpackChunkName: "about" */ './views/About.vue'),
+        import(/* webpackChunkName: "wallpapers" */ './views/Wallpapers.vue'),
     },
   ],
 });

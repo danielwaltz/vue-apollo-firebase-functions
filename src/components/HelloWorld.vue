@@ -1,11 +1,11 @@
 <template>
   <div class="hello-world">
-    <h1>{{ hello }}</h1>
+    <h1>{{ helloWorld }}</h1>
   </div>
 </template>
 
 <script>
-import HELLO from '@/graphql/Hello.gql';
+import HELLO_WORLD from '@/graphql/HelloWorld.gql';
 
 export default {
   name: 'HelloWorld',
@@ -16,8 +16,8 @@ export default {
     },
   },
   apollo: {
-    hello: {
-      query: HELLO,
+    helloWorld: {
+      query: HELLO_WORLD,
       variables() {
         return {
           message: this.message,
