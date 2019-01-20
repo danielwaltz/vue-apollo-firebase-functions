@@ -1,3 +1,0 @@
-projects:
-  app:
-    schemaPath: ../server/functions/graphql/schema.graphql

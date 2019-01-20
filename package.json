@@ -1,9 +1,9 @@
 {
-  "name": "client",
+  "name": "universal-wallpaper-sync",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --open",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
     "lint": "vue-cli-service lint --no-fix",
     "firebase": "firebase",

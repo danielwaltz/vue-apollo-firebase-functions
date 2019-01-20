@@ -3,7 +3,7 @@ module.exports = {
   assetsDir: 'static',
   pluginOptions: {
     apollo: {
-      serverFolder: '../server/functions/graphql',
+      serverFolder: 'functions/graphql',
     },
   },
 };
