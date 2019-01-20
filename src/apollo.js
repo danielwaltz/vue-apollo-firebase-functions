@@ -6,7 +6,7 @@ Vue.use(VueApollo);
 
 const httpEndpoint =
   process.env.VUE_APP_GRAPHQL_HTTP ||
-  'https://us-central1-universal-wallpaper-sync.cloudfunctions.net/api/graphql';
+  'http://localhost:5000/universal-wallpaper-sync/us-central1/api/graphql';
 
 const defaultOptions = {
   httpEndpoint,
