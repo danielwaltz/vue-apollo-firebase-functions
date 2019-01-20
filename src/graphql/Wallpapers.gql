@@ -1,7 +1,0 @@
-query wallpapers {
-  wallpapers {
-    id
-    name
-    url
-  }
-}

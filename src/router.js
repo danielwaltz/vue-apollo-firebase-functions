@@ -14,16 +14,16 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/wallpapers',
-      name: 'wallpapers',
+      path: '/photos',
+      name: 'photos',
       component: () =>
-        import(/* webpackChunkName: "wallpapers" */ './views/Wallpapers.vue'),
+        import(/* webpackChunkName: "photos" */ './views/Photos.vue'),
     },
     {
-      path: '/wallpapers/:id',
-      name: 'wallpaper',
+      path: '/photos/:id',
+      name: 'photo',
       component: () =>
-        import(/* webpackChunkName: "wallpapers" */ './views/Wallpaper.vue'),
+        import(/* webpackChunkName: "photos" */ './views/Photo.vue'),
     },
   ],
 });

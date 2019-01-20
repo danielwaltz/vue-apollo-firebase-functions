@@ -2,7 +2,7 @@
   <div class="app">
     <nav>
       <router-link :to="{ name: 'home' }">Home</router-link>
-      <router-link :to="{ name: 'wallpapers' }">Wallpapers</router-link>
+      <router-link :to="{ name: 'photos' }">Photos</router-link>
     </nav>
     <router-view />
   </div>

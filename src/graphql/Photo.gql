@@ -1,0 +1,7 @@
+query photo($id: ID!) {
+  photo(id: $id) {
+    id
+    title
+    url
+  }
+}

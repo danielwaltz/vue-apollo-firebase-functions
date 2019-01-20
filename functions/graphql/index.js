@@ -1,19 +1,19 @@
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
-const { wallpapers } = require('./data.js');
+const { getPhotos, getPhoto } = require('./photos');
 
 const setupServer = () => {
   const typeDefs = gql`
-    type Wallpaper {
+    type Photo {
       id: ID
-      name: String
+      title: String
       url: String
     }
 
     type Query {
       helloWorld(message: String): String
-      wallpapers: [Wallpaper]!
-      wallpaper(id: ID!): Wallpaper
+      photos: [Photo]!
+      photo(id: ID!): Photo
     }
   `;
 
@@ -22,11 +22,13 @@ const setupServer = () => {
       helloWorld: (parent, { message = 'world' }) => {
         return `Hello ${message}!`;
       },
-      wallpapers: () => {
-        return wallpapers || [];
+      photos: async () => {
+        const photos = await getPhotos();
+        return photos.data || [];
       },
-      wallpaper: (parent, { id }) => {
-        return wallpapers.find(item => item.id === id) || {};
+      photo: async (parent, { id }) => {
+        const photo = await getPhoto(id);
+        return photo.data || {};
       },
     },
   };

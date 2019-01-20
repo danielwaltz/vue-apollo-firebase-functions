@@ -1,7 +1,0 @@
-query wallpaper($id: ID!) {
-  wallpaper(id: $id) {
-    id
-    name
-    url
-  }
-}
