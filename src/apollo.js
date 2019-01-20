@@ -4,13 +4,9 @@ import { createApolloClient } from 'vue-cli-plugin-apollo/graphql-client';
 
 Vue.use(VueApollo);
 
-const httpEndpoint =
-  process.env.VUE_APP_GRAPHQL_HTTP ||
-  'http://localhost:5000/universal-wallpaper-sync/us-central1/api/graphql';
-
-const defaultOptions = {
-  httpEndpoint,
-};
+const defaultEndpoint = `${process.env.BASE_URL}/graphql`;
+const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || defaultEndpoint;
+const defaultOptions = { httpEndpoint };
 
 export function createProvider(options = {}) {
   const { apolloClient, wsClient } = createApolloClient({

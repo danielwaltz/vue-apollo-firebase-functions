@@ -1,8 +1,8 @@
 <template>
   <div class="app">
     <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/wallpapers">Wallpapers</router-link>
+      <router-link :to="{ name: 'home' }">Home</router-link>
+      <router-link :to="{ name: 'wallpapers' }">Wallpapers</router-link>
     </nav>
     <router-view />
   </div>
