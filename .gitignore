@@ -4,3 +4,4 @@ node_modules
 .evn
 .env.local
 .env.*.local
+.firebase
