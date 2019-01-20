@@ -1,11 +1,16 @@
 <template>
   <div class="about">
-    <h1>About</h1>
+    <HelloWorld :message="$route.name" />
   </div>
 </template>
 
 <script>
+import HelloWorld from '@/components/HelloWorld.vue';
+
 export default {
   name: 'About',
+  components: {
+    HelloWorld,
+  },
 };
 </script>

@@ -4,13 +4,13 @@ const { ApolloServer, gql } = require('apollo-server-express');
 const setupServer = () => {
   const typeDefs = gql`
     type Query {
-      hello: String
+      hello(message: String): String
     }
   `;
 
   const resolvers = {
     Query: {
-      hello: () => 'Hello world!',
+      hello: (parent, { message = 'world' }) => `Hello ${message}!`,
     },
   };
 
