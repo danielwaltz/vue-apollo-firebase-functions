@@ -31,14 +31,9 @@ const setupServer = () => {
     },
   };
 
-  const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-  });
-
+  const server = new ApolloServer({ typeDefs, resolvers });
   const app = express();
   server.applyMiddleware({ app });
-
   return app;
 };
 
