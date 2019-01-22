@@ -28,9 +28,10 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   background-color: rgba(255, 255, 255, 0.87);
   color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,6 +42,7 @@ img {
 }
 
 a {
+  color: inherit;
   transition: all 0.1s ease-out;
 }
 </style>
