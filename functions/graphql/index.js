@@ -19,7 +19,8 @@ const setupServer = () => {
 
   const resolvers = {
     Query: {
-      helloWorld: (parent, { message = 'world' }) => {
+      helloWorld: (parent, { message }) => {
+        if (!message) return 'Hello world!';
         return `Hello ${message}!`;
       },
       photos: async () => {
