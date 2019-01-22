@@ -21,29 +21,13 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 12px;
-  padding-bottom: 5%;
   pointer-events: none;
-  background: linear-gradient(
-    hsl(0, 0%, 0%) 0%,
-    hsla(0, 0%, 0%, 0.738) 19%,
-    hsla(0, 0%, 0%, 0.541) 34%,
-    hsla(0, 0%, 0%, 0.382) 47%,
-    hsla(0, 0%, 0%, 0.278) 56.5%,
-    hsla(0, 0%, 0%, 0.194) 65%,
-    hsla(0, 0%, 0%, 0.126) 73%,
-    hsla(0, 0%, 0%, 0.075) 80.2%,
-    hsla(0, 0%, 0%, 0.042) 86.1%,
-    hsla(0, 0%, 0%, 0.021) 91%,
-    hsla(0, 0%, 0%, 0.008) 95.2%,
-    hsla(0, 0%, 0%, 0.002) 98.2%,
-    hsla(0, 0%, 0%, 0) 100%
-  );
 }
 
 .nav a {
   margin-left: 10px;
   padding: 2px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.87);
   font-size: 20px;
   font-weight: 700;
   pointer-events: all;
@@ -56,6 +40,6 @@ export default {
 
 .nav a:hover,
 .nav .router-link-exact-active {
-  color: rgba(255, 255, 255, 1);
+  text-decoration: underline;
 }
 </style>

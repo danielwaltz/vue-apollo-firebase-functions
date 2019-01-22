@@ -15,7 +15,7 @@
       <button class="more" @click="showMore">Show More</button>
     </template>
 
-    <div v-else-if="$apollo.queries.photos.loading">Loading...</div>
+    <Loader v-else-if="$apollo.queries.photos.loading" />
 
     <div v-else>No photos found.</div>
   </LayoutMain>
@@ -23,12 +23,14 @@
 
 <script>
 import LayoutMain from '@/layouts/LayoutMain';
+import Loader from '@/components/Loader';
 import PHOTOS from '@/graphql/Photos.gql';
 
 export default {
   name: 'Photos',
   components: {
     LayoutMain,
+    Loader,
   },
   data() {
     return {
@@ -77,7 +79,17 @@ export default {
 }
 
 .more {
-  margin: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  border: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
   font-size: 26px;
+  appearance: none;
+  cursor: pointer;
 }
 </style>

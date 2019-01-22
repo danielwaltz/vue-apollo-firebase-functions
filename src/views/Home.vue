@@ -49,18 +49,11 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .container {
-  flex: 1;
   display: flex;
   align-items: center;
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
   text-align: center;
 }
 

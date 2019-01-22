@@ -6,7 +6,8 @@
 </template>
 
 <script>
-import MainNav from '@/layouts/partials/MainNav';
+import MainNav from '@/layouts/partials/_MainNav';
+
 export default {
   name: 'LayoutMain',
   components: {
@@ -17,6 +18,10 @@ export default {
 
 <style scoped>
 .layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: #1dbbe2;
 }
 </style>
