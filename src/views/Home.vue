@@ -8,7 +8,7 @@
       <h1 v-else>No connection.</h1>
 
       <input
-        v-model="message"
+        v-model.trim="message"
         class="field"
         type="text"
         placeholder="type something..."
