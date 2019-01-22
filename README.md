@@ -17,7 +17,7 @@ After dependencies are downloaded, start the frontend server and Firebase functi
 ```
 yarn serve
 cd functions
-npm run server
+npm run serve
 ```
 
 You can then navigate to `http://localhost:8080` and changes made will be reflected on save. The emulated cloud function is located at `http://localhost:5000/vue-apollo-firebase-functions/us-central1/api/graphql` and includes a GraphQL playground. Make sure you change the url inside the playground for it to work properly!
