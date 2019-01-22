@@ -1,28 +1,22 @@
 <template>
-  <div class="layout-main">
-    <nav>
-      <router-link :to="{ name: 'home' }">Home</router-link>
-      <router-link :to="{ name: 'photos' }">Photos</router-link>
-    </nav>
-
+  <div class="layout layout-main">
+    <MainNav />
     <slot />
   </div>
 </template>
 
 <script>
+import MainNav from '@/layouts/partials/MainNav';
 export default {
   name: 'LayoutMain',
+  components: {
+    MainNav,
+  },
 };
 </script>
 
 <style scoped>
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav a {
-  padding: 10px;
+.layout {
+  background-color: #1dbbe2;
 }
 </style>

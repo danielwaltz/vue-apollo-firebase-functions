@@ -1,8 +1,7 @@
 <template>
-  <div class="photo">
-    <h1>{{ photo.title || 'Photo' }}</h1>
-
+  <LayoutMain class="photo">
     <router-link v-if="photo.id" :to="{ name: 'photos' }">
+      <span class="title">{{ photo.title || 'Photo' }}</span>
       <img :src="photo.url" :alt="photo.author" />
     </router-link>
 
@@ -13,14 +12,18 @@
       {{ ` ` }}
       <router-link :to="{ name: 'photos' }">Go back</router-link>
     </div>
-  </div>
+  </LayoutMain>
 </template>
 
 <script>
+import LayoutMain from '@/layouts/LayoutMain';
 import PHOTO from '@/graphql/Photo.gql';
 
 export default {
   name: 'Photo',
+  components: {
+    LayoutMain,
+  },
   data() {
     return {
       photo: {},

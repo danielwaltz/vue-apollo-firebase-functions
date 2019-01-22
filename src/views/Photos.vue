@@ -1,7 +1,5 @@
 <template>
   <LayoutMain class="photos">
-    <h1>Photos</h1>
-
     <template v-if="hasPhotos">
       <div class="grid">
         <router-link
@@ -10,10 +8,11 @@
           :to="{ name: 'photo', params: { id: photo.id } }"
           class="photo"
         >
-          <img :src="photo.url" :alt="photo.author" />
+          <img :src="photo.url" :alt="photo.author" class="image" />
         </router-link>
       </div>
-      <button @click="showMore">Show More</button>
+
+      <button class="more" @click="showMore">Show More</button>
     </template>
 
     <div v-else-if="$apollo.queries.photos.loading">Loading...</div>
@@ -73,11 +72,11 @@ export default {
   width: 20%;
 }
 
-.photo img {
+.image {
   display: block;
 }
 
-button {
+.more {
   margin: 20px;
   font-size: 26px;
 }

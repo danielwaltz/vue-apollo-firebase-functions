@@ -15,13 +15,24 @@ export default {
   box-sizing: border-box;
 }
 
+html,
+body,
+.app,
+.layout {
+  min-height: 100vh;
+}
+
+html {
+  background-color: #000;
+}
+
 body {
   margin: 0;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: #2c3e50;
+  background-color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.87);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 }
 
 img {
@@ -30,11 +41,6 @@ img {
 }
 
 a {
-  font-weight: bold;
-  color: #42b983;
-}
-
-a.router-link-exact-active {
-  color: #2c3e50;
+  transition: all 0.1s ease-out;
 }
 </style>
