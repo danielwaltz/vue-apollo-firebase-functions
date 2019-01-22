@@ -1,4 +1,4 @@
-# universal-wallpaper-sync
+# vue-apollo-firebase-functions
 
 ## Project setup
 
