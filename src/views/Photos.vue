@@ -1,17 +1,22 @@
 <template>
   <div class="photos">
     <h1>Photos</h1>
-    <div class="grid">
-      <router-link
-        v-for="photo in pagedPhotos"
-        :key="photo.id"
-        :to="{ name: 'photo', params: { id: photo.id } }"
-        class="photo"
-      >
-        <img :src="photo.url" :alt="photo.author" />
-      </router-link>
-    </div>
-    <button @click="showMore">Show More</button>
+
+    <template v-if="hasPhotos">
+      <div class="grid">
+        <router-link
+          v-for="photo in pagedPhotos"
+          :key="photo.id"
+          :to="{ name: 'photo', params: { id: photo.id } }"
+          class="photo"
+        >
+          <img :src="photo.url" :alt="photo.author" />
+        </router-link>
+      </div>
+      <button @click="showMore">Show More</button>
+    </template>
+
+    <div v-else>No photos found.</div>
   </div>
 </template>
 
@@ -27,6 +32,9 @@ export default {
     };
   },
   computed: {
+    hasPhotos() {
+      return this.photos.length > 0;
+    },
     pagedPhotos() {
       return this.photos.slice(0, this.limit);
     },
@@ -39,6 +47,9 @@ export default {
   apollo: {
     photos: {
       query: PHOTOS,
+      update(data) {
+        return data.photos || [];
+      },
     },
   },
 };

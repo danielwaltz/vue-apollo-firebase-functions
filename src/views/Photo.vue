@@ -1,12 +1,14 @@
 <template>
   <div class="photo">
-    <h1>{{ photo.title }}</h1>
+    <h1>{{ photo.title || 'Photo' }}</h1>
+
     <router-link
       v-if="$apollo.queries.photo.loading || photo.id"
       :to="{ name: 'photos' }"
     >
       <img :src="photo.url" :alt="photo.author" />
     </router-link>
+
     <div v-else>
       <span>Photo missing.</span>
       {{ ` ` }}
@@ -32,6 +34,9 @@ export default {
         return {
           id: this.$route.params.id,
         };
+      },
+      update(data) {
+        return data.photo || {};
       },
     },
   },
