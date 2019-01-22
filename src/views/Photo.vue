@@ -2,15 +2,14 @@
   <div class="photo">
     <h1>{{ photo.title || 'Photo' }}</h1>
 
-    <router-link
-      v-if="$apollo.queries.photo.loading || photo.id"
-      :to="{ name: 'photos' }"
-    >
+    <router-link v-if="photo.id" :to="{ name: 'photos' }">
       <img :src="photo.url" :alt="photo.author" />
     </router-link>
 
+    <div v-else-if="$apollo.queries.photo.loading">Loading...</div>
+
     <div v-else>
-      <span>Photo missing.</span>
+      <span>No photo found.</span>
       {{ ` ` }}
       <router-link :to="{ name: 'photos' }">Go back</router-link>
     </div>

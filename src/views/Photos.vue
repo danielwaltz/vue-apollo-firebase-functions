@@ -1,5 +1,5 @@
 <template>
-  <div class="photos">
+  <LayoutMain class="photos">
     <h1>Photos</h1>
 
     <template v-if="hasPhotos">
@@ -16,15 +16,21 @@
       <button @click="showMore">Show More</button>
     </template>
 
+    <div v-else-if="$apollo.queries.photos.loading">Loading...</div>
+
     <div v-else>No photos found.</div>
-  </div>
+  </LayoutMain>
 </template>
 
 <script>
+import LayoutMain from '@/layouts/LayoutMain';
 import PHOTOS from '@/graphql/Photos.gql';
 
 export default {
   name: 'Photos',
+  components: {
+    LayoutMain,
+  },
   data() {
     return {
       photos: [],

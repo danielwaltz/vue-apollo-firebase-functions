@@ -1,9 +1,5 @@
 <template>
   <div class="app">
-    <nav>
-      <router-link :to="{ name: 'home' }">Home</router-link>
-      <router-link :to="{ name: 'photos' }">Photos</router-link>
-    </nav>
     <router-view />
   </div>
 </template>
@@ -40,15 +36,5 @@ a {
 
 a.router-link-exact-active {
   color: #2c3e50;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav a {
-  padding: 10px;
 }
 </style>
