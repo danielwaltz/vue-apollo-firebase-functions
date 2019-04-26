@@ -11,24 +11,26 @@
     "deploy": "run-s lint build firebase:deploy"
   },
   "dependencies": {
-    "vue": "^2.5.21",
-    "vue-apollo": "^3.0.0-beta.11",
-    "vue-router": "^3.0.1"
+    "vue": "^2.6.10",
+    "vue-apollo": "^3.0.0-beta.28",
+    "vue-router": "^3.0.6"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-plugin-eslint": "^3.3.0",
-    "@vue/cli-service": "^3.3.1",
+    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-eslint": "^3.6.0",
+    "@vue/cli-service": "^3.6.0",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "firebase-tools": "^6.3.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-graphql": "^3.0.3",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-vue": "^5.2.2",
+    "firebase-tools": "^6.7.1",
     "graphql-tag": "^2.9.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.16.0",
-    "vue-cli-plugin-apollo": "^0.19.1",
-    "vue-template-compiler": "^2.5.21"
+    "prettier": "^1.17.0",
+    "vue-cli-plugin-apollo": "^0.19.2",
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,
@@ -38,6 +40,9 @@
     "extends": [
       "plugin:vue/recommended",
       "@vue/prettier"
+    ],
+    "plugins": [
+      "graphql"
     ],
     "parserOptions": {
       "parser": "babel-eslint"

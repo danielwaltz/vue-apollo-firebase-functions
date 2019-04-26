@@ -79,6 +79,7 @@ export default {
   font-size: 5vw;
   text-align: center;
   appearance: none;
+  outline: 0;
   box-shadow: 0 0 3vw rgba(0, 0, 0, 0.6);
 }
 
