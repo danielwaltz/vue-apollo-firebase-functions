@@ -6,31 +6,7 @@ Vue.use(VueApollo);
 
 const defaultEndpoint = `${process.env.BASE_URL}/graphql`;
 const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || defaultEndpoint;
-const defaultOptions = { httpEndpoint };
+const { apolloClient } = createApolloClient({ httpEndpoint });
+const apolloProvider = new VueApollo({ defaultClient: apolloClient });
 
-export function createProvider(options = {}) {
-  const { apolloClient, wsClient } = createApolloClient({
-    ...defaultOptions,
-    ...options,
-  });
-  apolloClient.wsClient = wsClient;
-
-  const apolloProvider = new VueApollo({
-    defaultClient: apolloClient,
-    defaultOptions: {
-      $query: {
-        fetchPolicy: 'cache',
-      },
-    },
-    errorHandler(error) {
-      // eslint-disable-next-line no-console
-      console.log(
-        '%cError',
-        'background: red; color: white; padding: 2px 4px; border-radius: 3px; font-weight: bold;',
-        error.message
-      );
-    },
-  });
-
-  return apolloProvider;
-}
+export default apolloProvider;
