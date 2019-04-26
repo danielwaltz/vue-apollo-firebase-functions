@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import MainNav from '@/layouts/partials/_MainNav';
+import MainNav from '@/layouts/partials/MainNav';
 
 export default {
   name: 'LayoutMain',

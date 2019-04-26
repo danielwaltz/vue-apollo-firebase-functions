@@ -19,7 +19,7 @@
 <script>
 import LayoutMain from '@/layouts/LayoutMain';
 import Loader from '@/components/Loader';
-import PHOTO from '@/graphql/Photo.gql';
+import PHOTO from '@/graphql/Photo.graphql';
 
 export default {
   name: 'Photo',
@@ -40,9 +40,7 @@ export default {
           id: this.$route.params.id,
         };
       },
-      update(data) {
-        return data.photo || {};
-      },
+      update: data => data.photo || {},
     },
   },
 };

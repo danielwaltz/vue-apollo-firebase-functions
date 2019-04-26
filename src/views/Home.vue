@@ -11,7 +11,7 @@
         v-model.trim="message"
         class="field"
         type="text"
-        placeholder="type something..."
+        placeholder="Type something..."
       />
 
       <Loader :class="{ loading: $apollo.queries.helloWorld.loading }" />
@@ -22,7 +22,7 @@
 <script>
 import LayoutMain from '@/layouts/LayoutMain';
 import Loader from '@/components/Loader';
-import HELLO_WORLD from '@/graphql/HelloWorld.gql';
+import HELLO_WORLD from '@/graphql/HelloWorld.graphql';
 
 export default {
   name: 'Home',

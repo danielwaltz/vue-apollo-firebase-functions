@@ -24,7 +24,7 @@
 <script>
 import LayoutMain from '@/layouts/LayoutMain';
 import Loader from '@/components/Loader';
-import PHOTOS from '@/graphql/Photos.gql';
+import PHOTOS from '@/graphql/Photos.graphql';
 
 export default {
   name: 'Photos',
@@ -48,15 +48,13 @@ export default {
   },
   methods: {
     showMore() {
-      this.limit = this.limit + 20;
+      this.limit += 20;
     },
   },
   apollo: {
     photos: {
       query: PHOTOS,
-      update(data) {
-        return data.photos || [];
-      },
+      update: data => data.photos || [],
     },
   },
 };

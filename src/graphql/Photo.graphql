@@ -1,4 +1,4 @@
-query photo($id: ID!) {
+query Photo($id: ID!) {
   photo(id: $id) {
     id
     title

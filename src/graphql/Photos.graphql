@@ -1,4 +1,4 @@
-query photos {
+query Photos {
   photos {
     id
     title
